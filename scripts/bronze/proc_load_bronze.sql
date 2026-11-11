@@ -16,8 +16,16 @@ Usage Example:
   EXEC bronze.load_bronze;
 =====================================================================================================
 */
+-- Bulk Insert into crm_cust_info table
+
+EXEC bronze.load_bronze;  -- Save frequently used SQL code in stored procedure in database 
+
 CREATE OR ALTER PROCEDURE bronze.load_bronze AS
-BEGIN'==============================================';
+BEGIN
+	DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME;
+	BEGIN TRY
+		SET @batch_start_time = GETDATE()
+		PRINT '==============================================';
 		PRINT 'Loading the bronze layer';
 		PRINT '==============================================';
 
@@ -75,16 +83,16 @@ BEGIN'==============================================';
 		SET @end_time = GETDATE();
 		PRINT ' Load Duration: ' + CAST(DATEDIFF(SECOND, @start_time, @end_time) AS NVARCHAR) + 'seconds'
 
-		-- Bulk Insert in'----------------------------------------------';
+		-- Bulk Insert into erp_cust_az12 table
+
+		PRINT '----------------------------------------------';
 		PRINT 'Loading the ERP Tables';
 		PRINT '----------------------------------------------';
 
 		SET @start_time = GETDATE();
 		PRINT '>> Truncating the table: bronze.erp_cust_az12';
 		TRUNCATE TABLE bronze.erp_cust_az12;
-to erp_cust_az12 table
 
-		PRINT 
 		PRINT '>> Inserting Data Into: bronze.erp_cust_az12';
 		BULK INSERT bronze.erp_cust_az12
 		FROM 'C:\Users\mihir bhoir\OneDrive\Desktop\SQL Server\sql-data-warehouse-project\sql-data-warehouse-project\datasets\source_erp\CUST_AZ12.csv'
@@ -149,7 +157,3 @@ to erp_cust_az12 table
 
 	END CATCH
 END
-	DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME;
-	BEGIN TRY
-		SET @batch_start_time = GETDATE()
-		PRINT 
