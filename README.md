@@ -108,8 +108,25 @@ data-warehouse-project/
 
 This project is licensed under the [MIT License](LICENSE). You are free to use, modify, and share this project with proper attribution.
 
-## 🌟 About Me
+## ## 👨‍💻 About Me
 
-Hi there! I'm **Baraa Khatib Salkini**, also known as **Data With Baraa**. I’m an IT professional and passionate YouTuber on a mission to share knowledge and make working with data enjoyable and engaging!
+Hi, I'm **Mihir Bhoir**, a Computer Science graduate interested in Data Engineering and Data Analytics.
 
+I enjoy working with data, exploring datasets, and building projects that turn raw data into meaningful insights.
+
+**Technical Skills:**
+- SQL (SQL Server, MySQL)
+- Microsoft Excel
+- Power BI
+- Python (Learning)
+- Data Warehousing and ETL Concepts
+
+**Currently Working On:**
+- Building SQL-based Data Warehouse projects.
+- Improving my SQL and data analysis skills.
+- Learning data modeling, ETL pipelines, and data engineering concepts.
+
+I'm always eager to learn new technologies and improve my technical skills through hands-on projects.
+
+**Let's Connect and Learn Together!** 🚀
 .
